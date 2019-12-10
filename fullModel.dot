@@ -1,0 +1,72 @@
+digraph model{
+"model" [ color=red, label="RooAddPdf
+model"];
+"zModel" [ color=red, label="RooProdPdf
+zModel"];
+"mZmodel" [ color=red, label="RooAddPdf
+mZmodel"];
+"mZModelVoig" [ color=red, label="RooVoigtian
+mZModelVoig"];
+"invMass" [ color=blue, label="RooRealVar
+invMass"];
+"mZ" [ color=blue, label="RooRealVar
+mZ"];
+"widthZ" [ color=blue, label="RooRealVar
+widthZ"];
+"sigmaZVoig" [ color=blue, label="RooRealVar
+sigmaZVoig"];
+"frac" [ color=blue, label="RooRealVar
+frac"];
+"mZModel" [ color=red, label="RooGaussian
+mZModel"];
+"sigmaZGauss" [ color=blue, label="RooRealVar
+sigmaZGauss"];
+"MuPtModel" [ color=red, label="RooLandau
+MuPtModel"];
+"Mu_pT" [ color=blue, label="RooRealVar
+Mu_pT"];
+"m_pTMu" [ color=blue, label="RooRealVar
+m_pTMu"];
+"sigmaMuPt" [ color=blue, label="RooRealVar
+sigmaMuPt"];
+"zYield" [ color=blue, label="RooRealVar
+zYield"];
+"qcdModel" [ color=red, label="RooProdPdf
+qcdModel"];
+"qcdMassModel" [ color=red, label="RooExponential
+qcdMassModel"];
+"qcdMassDecayConst" [ color=blue, label="RooRealVar
+qcdMassDecayConst"];
+"MuPtModelBak" [ color=red, label="RooLandau
+MuPtModelBak"];
+"m_pTMuBak" [ color=blue, label="RooRealVar
+m_pTMuBak"];
+"qcdYield" [ color=blue, label="RooRealVar
+qcdYield"];
+"mZmodel" -> "mZModelVoig";
+"mZmodel" -> "mZModel";
+"mZmodel" -> "frac";
+"mZModelVoig" -> "sigmaZVoig";
+"mZModelVoig" -> "widthZ";
+"mZModelVoig" -> "mZ";
+"mZModelVoig" -> "invMass";
+"mZModel" -> "sigmaZGauss";
+"mZModel" -> "mZ";
+"mZModel" -> "invMass";
+"MuPtModel" -> "m_pTMu";
+"MuPtModel" -> "sigmaMuPt";
+"MuPtModel" -> "Mu_pT";
+"MuPtModelBak" -> "m_pTMuBak";
+"MuPtModelBak" -> "sigmaMuPt";
+"MuPtModelBak" -> "Mu_pT";
+"qcdMassModel" -> "qcdMassDecayConst";
+"qcdMassModel" -> "invMass";
+"zModel" -> "mZmodel";
+"zModel" -> "MuPtModel";
+"qcdModel" -> "MuPtModelBak";
+"qcdModel" -> "qcdMassModel";
+"model" -> "qcdYield";
+"model" -> "zModel";
+"model" -> "qcdModel";
+"model" -> "zYield";
+}
